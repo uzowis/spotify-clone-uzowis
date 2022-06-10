@@ -1,0 +1,29 @@
+.sidebarOption {
+  padding-left: 25px;
+  color: rgb(181, 178, 185);
+  font-weight: bold;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: 0.2s ease-in;
+  display: flex;
+  align-items: center;
+  height: 38px;
+}
+.sidebarOption:hover {
+  color: white;
+}
+.sidebarOption *.MuiSvgIcon-root {
+  margin-right: 10px;
+  font-size: 1.8rem;
+}
+
+.sidebarOption > p {
+  margin-bottom: 0px;
+  
+}
+
+.no_Icon{
+  height: 20px !important;
+  color: red;
+  font-size: 0.5rem;
+}

@@ -1,0 +1,56 @@
+.song__row{
+    display: flex;
+    /* align-items: center; */
+    color: white;
+    /* justify-content: space-around; */
+    margin-left: 50px;
+    padding: 15px 0;
+    padding-left: 15px;
+    margin-right: 40px;
+}
+.song__row:hover{
+    background-color: rgba(0, 0, 0, 0.184);
+    /* opacity: 0.2; */
+    border: none;
+    color: white;
+    /* padding: 3px 0; */
+    border-radius: 5px;
+}
+.table__no{
+    flex: 0.1;
+    font-size: 13px;
+    
+}
+.title{
+    display: flex;
+    flex :0.5;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: left;
+
+}
+.title > img{
+    object-fit: contain;
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+.song__info > h3{
+    font-size: 20px;
+    margin-bottom: 0px;
+    cursor: pointer;
+}
+.song__info > p{
+    margin-top: 0px;
+}
+.album{
+    flex: 0.3;
+    text-align: left;
+    margin-right: 15px;
+}
+.time{
+    flex: 0.1;
+    place-items: flex-end;
+    text-align: right;
+    margin-right: 15px;
+}

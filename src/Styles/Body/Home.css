@@ -1,0 +1,10 @@
+.Home{
+    flex: 0.8;
+    height: 100vh;
+    width: 100%;
+    overflow-y: scroll;
+    background-color: rgb(27, 24, 24);
+    padding-bottom: 100px;
+
+
+}

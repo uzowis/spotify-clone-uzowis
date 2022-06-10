@@ -1,0 +1,83 @@
+.body{
+    flex: 0.8;
+    height: 100vh;
+    width: 100%;
+    overflow-y: scroll;
+    background: linear-gradient( rgb(164, 84, 218), rgb(0, 0, 0) );
+    padding-bottom: 150px;
+
+
+}
+.music_banner {
+    margin: 0px 30px;
+    display: flex;
+    align-items: flex-end;
+    max-height: 200px;
+}
+.music_banner >img{
+    object-fit: contain;
+    height: 200px;
+    
+    box-shadow: 0 4px 60px black ;
+}
+.music_info{
+    padding: 20px;
+    color: white;
+    width: 100%;
+    max-height: 200px;
+    min-width: 350px;
+    
+}
+.music_info > p:nth-child(1){
+    font-weight: bold;
+    color: white;
+    font-size: 0.8rem;
+    margin-bottom: 0px;
+
+}
+.music_info > h2{
+    font-weight: bold;
+    font-size: 6vw;
+    /* line-height: 42px; */
+    margin-top: 0px;
+}
+.music_info > p{
+    padding: 0px 0;
+    margin: 0px 0;
+    font-size: 0.8rem;
+
+}
+.play__icons{
+    display: flex;
+    padding: 10px 30px;
+    margin-top: 20px;
+    align-items: center;
+    color: green;
+}
+.play__icons > .MuiSvgIcon-root{
+    color: green;
+    margin-right: 20px;
+    font-size: 38px;
+}
+.play__icon{
+    font-size: 80px !important;
+}
+.play__icon:hover{
+    transition: 100ms transform ease-in;
+    transform: scale(1.08);
+    cursor: pointer;
+}
+
+.table__heading{
+    display: flex;
+    align-items: center;
+    color: white;
+    justify-content: space-between;
+    margin: 0 50px;
+    font-size: 14px;
+}
+.body > hr{
+    background-color: white;
+    opacity: 0.1;
+    margin: 5px 50px;
+}

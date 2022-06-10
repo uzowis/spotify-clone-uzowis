@@ -1,0 +1,41 @@
+.sidebar {
+  flex: 0.2;
+  height: 100vh;
+  min-width: 230px;
+  background-color: black;
+  color: white;
+}
+.sidebar > img {
+  height: 45px;
+  margin: 15px;
+  object-fit: contain;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.sidebar_title{
+    margin-top: 15px;
+    font-size: 0.9rem;
+    color: rgb(171, 170, 173);
+
+}
+.sidebar_title > p{
+    margin-bottom: 0px;
+    margin-left: 30px;
+}
+.sidebar_title >hr {
+  border: 1px solid rgb(31, 29, 29);
+  margin-top: 3px;
+  margin-left: 30px;
+  margin-right: 15px;
+}
+
+.playlists{
+  font-size: 0.85rem;
+  color: rgb(171, 170, 173);
+  font-weight: 500;
+  cursor: pointer;
+  transition: 120ms ease-in;
+}
+.playlists:hover{
+  color: white;
+}

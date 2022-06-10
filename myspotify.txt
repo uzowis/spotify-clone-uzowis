@@ -1,0 +1,26 @@
+SPOTIFY CLONE PROJECT
+
+1. Sign up with SPOTIFY
+2. Login > go to Dashboard, create new App > Add app name description.
+3. Edit and add redirect URL (Callback URL) with your development URL http://localhost:3000
+4. take note of client-id (e302441f3995440bb31b0ea29e08c27f)
+5. Create your react app (npx create-react-app myspotify-app)
+6. Create a Login component > Style it
+7. Generate the login URL- strip it to get the access_token from the response_url.
+8. if token is generated login user to the Player.
+9. Install spotifywebapi wrapper.(npm i spotify-web-api-js)
+10. Instantiate the spotifywebapi class > set  the access token  > starting fetching data from the endpoints
+eg( getting the user profile details using getMe())
+11. Style the Player layout (breaking the contents down into different components)
+12. Using Context API for state Management.
+13 -1 Wrap the App component iniside the StateProvider component(DataLayer) in index.js file
+14 -2 Create a reducer.js file (This would contain the initialState and the reducer objects)
+15 -3 Create the StateProvider component (DataLayer) 
+    // import {createContext, useContex, }
+    // Instantiate the createContext
+    // Build the Parent StateProvider
+    // Consume the provider by initiating a client
+16 Filtering out the playlists
+
+
+
