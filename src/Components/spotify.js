@@ -1,6 +1,6 @@
 const authEndpoint = 'https://accounts.spotify.com/authorize';
 const clientId = 'e302441f3995440bb31b0ea29e08c27f';
-const redirectUrl = 'http://localhost:3000/';
+const redirectUrl = 'https://spotifyclone-uzowis.web.app/';
 
 const scopes = [
     "user-read-currently-playing",
