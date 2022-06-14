@@ -2,28 +2,23 @@ import { PauseCircleFilled, PlayCircleFilled, PlaylistPlay, Repeat, Shuffle, Ski
 import {Slider, Grid } from '@material-ui/core';
 import './../../Styles/Footer/Footer.css';
 import { useDataLayerValue } from '../DataLayer';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 const Footer = () => {
     const [{ playlists, isPlaying }, dispatch] = useDataLayerValue();
-    console.log(isPlaying);
+    console.log("Datalayer: ", isPlaying);
     // const isPlaying = data.isPlaying;
-    function playPauseClick(){
-        if(!isPlaying){
-            dispatch({
-                type: 'SET_PlAY_STATUS',
-                isPlaying : true
-            });
-        }else{
-            dispatch({
-                type: 'SET_PlAY_STATUS',
-                isPlaying : false
-            });
-        }
-    }
+    const [_isPlaying, _setIsPlaying] = useState('false');
+    console.log("From Footer: ", _isPlaying);
+
     useEffect(()=>{
-        console.log(isPlaying);
-    }, [isPlaying]);
+        if(dispatch({
+            type : "SET_PLAY_STATUS",
+            isPlaying : _isPlaying
+        })){
+            console.log(`Was Changed from Footer: ${isPlaying}`);
+        }
+    }, [_isPlaying]);
 
     return ( 
         <div className="footer">
@@ -42,9 +37,9 @@ const Footer = () => {
                     {
                     isPlaying 
                     ? 
-                    <PauseCircleFilled onClick={()=>{playPauseClick()}} fontSize='large'/>
+                    <PauseCircleFilled onClick={()=>_setIsPlaying(!_isPlaying)} fontSize='large'/>
                     :
-                    <PlayCircleFilled onClick={()=>{playPauseClick()}} fontSize='large'/>
+                    <PlayCircleFilled onClick={()=>_setIsPlaying(!_isPlaying)} fontSize='large'/>
                     }
                     
                     <SkipNext />

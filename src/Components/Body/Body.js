@@ -20,13 +20,14 @@ const Body = ({spotify}) => {
         })
     }, [playlistId]);
 
+    
+
     const [trackIndex, setTrackIndex] = useState(0);
     const [_isPlaying, _setIsPlaying] = useState(false);
     const [audioSrc, setAudioSrc] = useState('');
 
     // Refs
     const audioRef = useRef();
-
     useEffect(()=>{
         if(_isPlaying){
             audioRef.current.play();
@@ -36,7 +37,7 @@ const Body = ({spotify}) => {
             console.log(`I'm now Paused`);
         }
         
-    }, [_isPlaying]);
+    }, [_isPlaying, isPlaying]);
    
     const selectPlayPause = (indexNo) => {
         setTrackIndex(indexNo);
@@ -50,7 +51,16 @@ const Body = ({spotify}) => {
             _setIsPlaying(true);
         }
     }
-
+    useEffect(()=>{
+        // _setIsPlaying(isPlaying);
+        if(dispatch({
+            type : "SET_PLAY_STATUS",
+            isPlaying : _isPlaying
+        })){
+            console.log(`Was Changed from Body: ${isPlaying}`);
+        }
+        
+    }, [_isPlaying]);
     
     return ( 
         <div className="body">
